@@ -1,6 +1,17 @@
 # Valid Palindrome
 
 class Solution:
-    def myPow(self, x: float, n: int) -> float:
-        return x**n
+    def isPalindrome(self, s: str) -> bool:
+        a=''
+        for i in s:
+            if i.isalpha() or i.isnumeric():
+                a = a + i
+            else:
+                continue
+            
+        if a.lower() == a[::-1].lower():
+            return True
+        else:
+            return False
+
         
